@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import MainLayout from "../loyouts/MainLayout"
-import Home from "../pages/Home"
+import {CreateUser, Home} from "../pages"
 function Routes() {
     const router = createBrowserRouter([
         {
@@ -10,6 +10,14 @@ function Routes() {
                 {
                     index: true,
                     element: <Home />
+                },
+                {
+                    path: "/create-user",
+                    element: <CreateUser />
+                },
+                {
+                    path: "*",
+                    element: <h1>Bunday sahifa hali mavjud emas!!!</h1>
                 }
             ]
         }

@@ -1,4 +1,4 @@
- import { useState } from "react";
+import { useState } from "react";
 import {apiAxios} from "../api/apiAxios";
  const useApi = () => {
     const [error, setError] = useState(null);
@@ -27,7 +27,7 @@ import {apiAxios} from "../api/apiAxios";
         get: (param="") => result("get", "/allUsers"+param),
         post: (data) => result("post", "/allUsers", data),
         patch: (param, data) => result("patch", "/allUsers/"+param, data),
-        delete: (param) => result("delete", "/allUsers/"+param)
+        deleteUser: (id) => result("delete", "/allUsers/" + id)
     };
 };
 export default useApi

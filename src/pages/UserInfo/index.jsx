@@ -24,7 +24,7 @@ function UserInfo() {
             e.target.reset()        
     };
   const handleDelete = async()=>{
-      await deleteUser("/"+id)
+      await deleteUser(id)
       toast.warning("Foydalanuvchi o'chirib yuborildi")
     navigate("/")
     }

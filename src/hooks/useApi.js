@@ -24,8 +24,10 @@ import {apiAxios} from "../api/apiAxios";
     return { 
         loading,
         error,
-        get: () => result("get", "/allUsers"),
-        post: (data) => result("post", "/allUsers", data)
+        get: (param="") => result("get", "/allUsers"+param),
+        post: (data) => result("post", "/allUsers", data),
+        patch: (param, data) => result("patch", "/allUsers/"+param, data),
+        delete: (param) => result("delete", "/allUsers/"+param)
     };
 };
 export default useApi

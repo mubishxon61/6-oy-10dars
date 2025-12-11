@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import MainLayout from "../loyouts/MainLayout"
-import {CreateUser, Home} from "../pages"
+import {CreateUser, Home, UserInfo} from "../pages"
 function Routes() {
     const router = createBrowserRouter([
         {
@@ -14,6 +14,10 @@ function Routes() {
                 {
                     path: "/create-user",
                     element: <CreateUser />
+                },
+                {
+                    path: "/user-info/:id",
+                    element: <UserInfo />
                 },
                 {
                     path: "*",

@@ -1,2 +1,3 @@
 export {default as Home} from "./Home"
 export { default as CreateUser } from "./CreateUser"
+export { default as UserInfo } from "./UserInfo"
